@@ -15,7 +15,6 @@ class HelloWorldAgentExecutor:
     async def execute(self, request, event_queue, **kwargs):
         result = await self.agent.invoke()
 
-        # Corrected function
         await event_queue.enqueue_event(
             new_agent_text_message(result)
         )
@@ -25,3 +24,4 @@ class HelloWorldAgentExecutor:
     async def cancel(self, request_id: str):
         # Agar cancel support nahi chahiye
         return None
+
