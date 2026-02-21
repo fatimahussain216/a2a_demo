@@ -39,7 +39,7 @@ def main():
     server = A2AStarletteApplication(
         agent_card=public_agent_card,
         http_handler=request_handler,
-        #extended_agent_card=specific_extended_agent_card,
+        
     )
 
     
@@ -47,3 +47,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
